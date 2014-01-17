@@ -23,7 +23,7 @@ angular.module('musicAlbumApp', [
         var loadAngularI18n = function (langRange) {
             var angularI18nScript = 'lib/angular-i18n/angular-locale_' + langRange + '.js';
             $.getScript(angularI18nScript)
-                .fail(function (jqxhr, settings, exception) {
+                .fail(function () {
                     console.warn('Could not load ' + angularI18nScript + ' for language: ' + langRange);
                     $.getScript('lib/angular-i18n/angular-locale_no.js');
                 });
@@ -57,7 +57,7 @@ angular.module('musicAlbumApp', [
         if (!translated) {
             translation.getTranslation($rootScope, language);
             $http.jsonp('http://ajaxhttpheaders.appspot.com?callback=JSON_CALLBACK').
-                success(function (data, status) {
+                success(function (data) {
                     var acceptLang = data['Accept-Language'];
                     langRange = userLanguage.getFirstLanguageRange(acceptLang);
                     language = userLanguage.getLanguage(langRange);

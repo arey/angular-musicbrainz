@@ -50,4 +50,4 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
     }])
     .controller('InfoCtrl', [function () {
 
-    }]);
+}]);
