@@ -1,0 +1,102 @@
+/* app css stylesheet */
+
+/* See http://angular-ui.github.io/bootstrap/#/getting_started */
+.nav, .pagination, .carousel a { cursor: pointer; }
+
+/* Main menu */
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+/* Album rating */
+.star-rating {
+    position: relative;
+    display: block;
+    width: 125px;
+    height: 25px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-position: 0 0
+}
+
+.star-rating li {
+    display: inline
+}
+
+.star-rating a, .star-rating .current-user-rating, .star-rating .current-rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: -1000em;
+    height: 25px;
+    line-height: 25px;
+    outline: none;
+    overflow: hidden;
+    border: none
+}
+
+.star-rating .current-rating {
+    z-index: 1;
+    background-position: 0 -75px
+}
+
+.inline-rating {
+    display: -moz-inline-block;
+    display: -moz-inline-box;
+    display: inline-block
+}
+
+.small-star {
+    width: 50px;
+    height: 10px
+}
+
+.small-star, .small-star a:hover, .small-star a:active, .small-star a:focus, .small-star .current-user-rating, .small-star .current-rating {
+    background-image: url('../img/rating_star_small.gif');
+    line-height: 10px;
+    height: 10px
+}
+
+.small-star .current-rating {
+    background-position: 0 -30px
+}
+
+/* Override Pagination CSS */
+.pagination {
+    margin: 10px 0;
+}
+
+.middle-col {
+    vertical-align: middle;
+}
+.middle-col-support {
+    display: table-cell;
+    float: none;
+}

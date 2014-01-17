@@ -1,0 +1,29 @@
+{
+    "SEARCH_LABEL" : "Searching a music album",
+    "SEARCH_PLACEHOLDER" : "Enter a music album",
+    "SEARCH_BUTTON" : "MusicBrainz Search",
+    "SEARCH_RESULTS" : "result(s)",
+    "SEARCH_MS" : "milliseconds",
+    "SEARCH_PREVIOUS" : "Previous",
+    "SEARCH_NEXT" : "Next",
+
+    "SEARCH_PAGE_DISPLAY" : "Display",
+    "SEARCH_PAGE_RESULT" : "results per page",
+
+    "ALBUM_FROM" : "from",
+    "ALBUM_RELEASE": "release in",
+    "ALBUM_KIND": "Kind",
+
+    "FILTER_TITLE" : "Filters",
+    "FILTER_RATING" : "Rating",
+    "FILTER_ARTIST_TYPE" : "Artist Type",
+    "FILTER_RELEASE_DATE" : "Release Date",
+    "FILTER_RELEASE_DATE_BEFORE" : "Before",
+    "FILTER_RELEASE_DATE_SINCE" : "Since",
+    "FILTER_RELEASE_DATE_YEAR" : "Years",
+
+    "ARTIST_TYPE_1" : "Person",
+    "ARTIST_TYPE_2" : "Group",
+    "ARTIST_TYPE_3" : "Other"
+
+}

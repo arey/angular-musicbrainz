@@ -1,0 +1,30 @@
+{
+    "SEARCH_LABEL" : "Recherche musicale",
+    "SEARCH_PLACEHOLDER" : "Saisir un album de musique ou un artiste",
+    "SEARCH_BUTTON" : "Recherche MusicBrainz",
+    "SEARCH_RESULTS" : "résultat(s)",
+    "SEARCH_IN" : "en",
+    "SEARCH_MS" : "millisecondes",
+    "SEARCH_PREVIOUS" : "Précédent",
+    "SEARCH_NEXT" : "Suivant",
+
+    "SEARCH_PAGE_DISPLAY" : "Afficher",
+    "SEARCH_PAGE_RESULT" : "résultats par page",
+
+    "ALBUM_FROM" : "par",
+    "ALBUM_RELEASE": "Sortie en",
+    "ALBUM_KIND": "Genre ",
+
+    "FILTER_TITLE" : "Filtres",
+    "FILTER_RATING" : "Appréciation",
+    "FILTER_ARTIST_TYPE" : "Type d'artiste",
+    "FILTER_RELEASE_DATE" : "Date de sortie",
+    "FILTER_RELEASE_DATE_BEFORE" : "Avant",
+    "FILTER_RELEASE_DATE_SINCE" : "Depuis",
+    "FILTER_RELEASE_DATE_YEAR" : "Années",
+
+    "ARTIST_TYPE_1" : "Personne",
+    "ARTIST_TYPE_2" : "Groupe",
+    "ARTIST_TYPE_3" : "Autre"
+
+}
