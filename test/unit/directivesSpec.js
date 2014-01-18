@@ -48,7 +48,9 @@ describe('directives', function() {
                 };
                 var element = $compile('<cover album-id="album.id"/>')($rootScope);
                 $rootScope.$digest();
-                expect(element.html()).toContain('<img width="125px" ng-src="http://coverartarchive.org/release-group/c6b36664-7e60-3b3e-a24d-d096c67a11e9/front-250.jpg" src="http://coverartarchive.org/release-group/c6b36664-7e60-3b3e-a24d-d096c67a11e9/front-250.jpg">');
+                expect(element.html()).toContain('<img');
+                expect(element.html()).toContain('width="125px"');
+                expect(element.html()).toContain('src="http://coverartarchive.org/release-group/c6b36664-7e60-3b3e-a24d-d096c67a11e9/front-250.jpg"');
             });
         });
     });

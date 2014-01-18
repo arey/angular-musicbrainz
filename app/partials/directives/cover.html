@@ -1,15 +1,3 @@
 <a title="" href="http://coverartarchive.org/release-group/{{albumId}}/front0.jpg">
     <img width="125px" ng-src="http://coverartarchive.org/release-group/{{albumId}}/front-250.jpg" />
-    <!--<img width="125px" src="img/c6b36664-7e60-3b3e-a24d-d096c67a11e9-front-250.jpg" />	-->
-    <script>
-        $('img').last ().bind ('error', function (event) {
-            if ($(this).attr ("src") === "http://coverartarchive.org/release-group/{{albumId}}/front-250.jpg")
-            {
-                $(this).attr ("src", "http://coverartarchive.org/release-group/{{albumId}}/front.jpg");
-            } else
-            {
-                $(this).closest ('a').replaceWith ('<em>Image not available yet, please try again in a few minutes.</em>');
-            }
-        }).attr ("src", "http://coverartarchive.org/release-group/{{albumId}}/front-250.jpg");
-    </script>
 </a>
