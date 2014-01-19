@@ -92,14 +92,10 @@ info.
   * run the tests from console with [Karma](http://karma-runner.github.io) via
     `scripts/e2e-test.sh` or `script/e2e-test.bat`
 
-### Continuous Integration
 
-CloudBees have provided a CI/deployment setup:
+## Build Status ##
 
-<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
-
-If you run this, you will get a cloned version of this repo to start working on in a private git repo, 
-along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
+Travis : [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?branch=master)](https://travis-ci.org/arey/angular-musicbrainz)
 
 
 ## Directory Layout
