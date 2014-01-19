@@ -48,6 +48,8 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
             return range.count > 0;
         };
     }])
-    .controller('InfoCtrl', [function () {
-
-}]);
+    .controller('InfoCtrl', ['$scope', function ($scope) {
+        $scope.demoUrl = 'http://angular-musicbrainz.javaetmoi.com/';
+        $scope.demoSourceUrl = 'https://github.com/arey/angular-musicbrainz';
+    }
+]);

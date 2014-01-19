@@ -1,5 +1,5 @@
-<p>Information.</p>
-<p>
-    Showing of 'interpolate' filter:
-    {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<ul>
+    <li>Application version: {{ 'v%VERSION%' | interpolate }}</li>
+    <li >Online Demo: <span ng-bind-html="demoUrl | linky"/></li>
+    <li>AngularJS Source Code: <span ng-bind-html="demoSourceUrl | linky"/></li>
+</ul>
