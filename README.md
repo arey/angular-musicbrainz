@@ -14,6 +14,11 @@ Only "real" **Album** are searchable. Single, EP, Compilation, Live, Remix, Soun
 * Elasticsearch-js client usage
 * Responsive Design
 
+## Online Demo
+
+MusicBrainz database searching with AngularJS and Elasticsearch:
+[http://angular-musicbrainz.javaetmoi.com/](http://angular-musicbrainz.javaetmoi.com/ "MusicBrainz database searching with AngularJS and Elasticsearch")
+
 ## Powered by ##
 
 This project depends on several other open source projects:
