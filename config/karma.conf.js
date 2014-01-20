@@ -7,7 +7,7 @@ module.exports = function(config){
       'app/lib/angular/angular.js',
       'app/lib/**/angular-*.js',
       'app/lib/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js',
-      'test/lib/angular/angular-mocks.js',
+      'app/lib/angular-mocks/angular-mocks.js',
 
       // our app
       'app/js/**/*.js',
@@ -21,8 +21,7 @@ module.exports = function(config){
     ],
 
     exclude : [
-      'app/lib/angular-loader/angular-loader.js',
-      'test/lib/angular/angular-scenario.js'
+      'app/lib/angular-scenario/angular-scenario.js'
     ],
 
     autoWatch : true,
