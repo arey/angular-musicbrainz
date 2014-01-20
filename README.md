@@ -6,18 +6,27 @@ Only "real" **Album** are searchable. Single, EP, Compilation, Live, Remix, Soun
 
 ## Features ##
 
-* **Auto-suggest** with highlighting
+* **Autocomplete** with highlighting
 * **Paginated search results** with album cover thumbs
+* **Faceting**: distribution of music albums in the result set
 * **I18N*: both english and french languages are supported
-* **Unit tests** and **end-to-end tests** with Karma and Jasmine.
+* **Unit tests** and **end-to-end tests** with Karma and Jasmine
 * Cover and Rating Angular directives
 * Elasticsearch-js client usage
 * Responsive Design
+
+
+## Quick Start ##
+
+* `git clone https://github.com/arey/angular-musicbrainz`
+* Open the `app/index.html` file into Firefox
+
 
 ## Online Demo
 
 MusicBrainz database searching with AngularJS and Elasticsearch:
 [http://angular-musicbrainz.javaetmoi.com/](http://angular-musicbrainz.javaetmoi.com/ "MusicBrainz database searching with AngularJS and Elasticsearch")
+
 
 ## Powered by ##
 
@@ -62,13 +71,13 @@ One unziped, edit the config/elaticsearch.yml configuration file. Uncomment the 
 You may also prefer to keep the default _elasticsearch_ cluster name and change the name in the es-musicbrainz-batch.properties configuration file.<br/>
 
 Edit the app/js/services.js file<br/>
-A line 11 change `hosts: [ 'es.javaetmoi.com:80' ]` to `hosts: [ 'localhost:9200' ]`<br/>
+At line 11, change `hosts: [ 'es.javaetmoi.com:80' ]` configuration to `hosts: [ 'localhost:9200' ]`
 
 ## Running the application
 
 * Clone the angular-musicbrainz repository.
 * Run `scripts/web-server.js` with NodeJS or deploy the `app` directory into a local web server.
-* Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running inyour browser.
+* Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in your browser.
 
 ## Running unit tests
 
@@ -105,30 +114,42 @@ Travis : [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?bra
 
 ## Directory Layout
 
-    app/                --> all of the files to be used in production
+    app/                --> all of the files to be used in development
       css/              --> css files
         app.css         --> default stylesheet
+      i18n/             --> json files for french and english languages
       img/              --> image files
       index.html        --> app layout file (the main html template file of the app)
-      index-async.html  --> just like index.html, but loads js files asynchronously
       js/               --> javascript files
         app.js          --> application
         controllers.js  --> application controllers
         directives.js   --> application directives
         filters.js      --> custom angular filters
         services.js     --> custom angular services
-      lib/              --> angular and 3rd party javascript libraries
+      lib/                  --> angular and 3rd party javascript libraries declared in bower.json
         angular/
-          angular.js        --> the latest angular js
-          angular.min.js    --> the latest minified angular js
-          angular-*.js      --> angular add-on modules
-          version.txt       --> version number
+        angular-mocks/      --> mocks that replace certain angular services in tests
+        angular-resource/
+        angular-route/
+        angular-sanitize/
+        angular-scenario/   --> angular's scenario (end-to-end) test runner library
+        angular-ui-bootstrap-bower/
+        bootstrap/
+        elasticsearch-js/
+        jquery/
       partials/             --> angular view partials (partial html templates)
-        partial1.html
-        partial2.html
+        info.html
+        search.html
+        directives/
+          cover.html        --> angular templates behind directives
+          rating.html
 
     config/karma.conf.js        --> config file for running unit tests with Karma
     config/karma-e2e.conf.js    --> config file for running e2e tests with Karma
+
+    dist                --> files created by `grunt build` to be used in production
+
+    node_modules        --> files installed by nodejs in order to run grunt and karma
 
     scripts/            --> handy shell/js/ruby scripts
       e2e-test.sh       --> runs end-to-end tests with Karma (*nix)
@@ -138,17 +159,11 @@ Travis : [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?bra
       web-server.js     --> simple development webserver based on node.js
 
     test/               --> test source files and libraries
-      e2e/              -->
+      e2e/              --> end-to-end tests level
         runner.html     --> end-to-end test runner (open in your browser to run)
         scenarios.js    --> end-to-end specs
-      lib/
-        angular/                --> angular testing libraries
-          angular-mocks.js      --> mocks that replace certain angular services in tests
-          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
-          version.txt           --> version file
       unit/                     --> unit level specs/tests
         controllersSpec.js      --> specs for controllers
         directivessSpec.js      --> specs for directives
         filtersSpec.js          --> specs for filters
         servicesSpec.js         --> specs for services
-
