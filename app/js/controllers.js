@@ -33,6 +33,13 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
             return $scope.searchResp ? true : false;
         };
 
+        $scope.isAtLeastOneResult = function () {
+            if (!$scope.isAvailableResults()) {
+                return false;
+            }
+            return $scope.searchResp.hits.total > 0;
+        };
+
         $scope.selected = undefined;
         $scope.autocomplete = function (text) {
             return searchService.autocomplete(text).then(function (res) {

@@ -56,7 +56,7 @@
             </table>
             <pager total-items="totalItems" page="currentPage" on-select-page="selectPage(page)"></pager>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4" ng-show="isAtLeastOneResult()">
             <div class="panel panel-primary">
                 <div class="panel-heading" ng-bind="translation.FILTER_TITLE">Filters</div>
                 <div class="panel-body">
