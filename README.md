@@ -15,6 +15,7 @@ Only "real" **Album** are searchable. Single, EP, Compilation, Live, Remix, Soun
 * Elasticsearch-js client usage
 * Responsive Design
 
+![Angular Musicbrainz Screenshot](https://raw.github.com/arey/angular-musicbrainz/screenshot.png "Angular Musicbrainz Screenshot")
 
 ## Quick Start ##
 
