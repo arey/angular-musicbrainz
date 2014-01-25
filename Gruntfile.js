@@ -416,4 +416,9 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.registerTask('coverage', [
+        'karma:coverage',
+        'coveralls'
+    ]);
 };
