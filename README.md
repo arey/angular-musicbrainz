@@ -114,6 +114,9 @@ Travis: [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?bran
 
 Code Converage: [![Coverage Status](https://coveralls.io/repos/arey/angular-musicbrainz/badge.png)](https://coveralls.io/r/arey/angular-musicbrainz)
 
+Dependencies: [![Dependency Status](https://david-dm.org/arey/angular-musicbrainz/status.png?branch=master)](https://david-dm.org/arey/angular-musicbrainz#info=Dependencies)
+[![devDependency Status](https://david-dm.org/arey/angular-musicbrainz/dev-status.png?branch=master)](https://david-dm.org/arey/angular-musicbrainz#info=devDependencies)
+
 ## Directory Layout
 
     app/                --> all of the files to be used in development
