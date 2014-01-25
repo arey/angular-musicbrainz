@@ -310,10 +310,36 @@ module.exports = function (grunt) {
                 'htmlmin'
             ]
         },
+
         karma: {
-            unit: {
+            options: {
                 configFile: 'config/karma.conf.js',
+            },
+            dev: {
+                browsers: ['Chrome']
+            },
+            ci: {
+                browsers: ['PhantomJS'],
                 singleRun: true
+            },
+            coverage: {
+                browsers: ['PhantomJS'],
+                reporters: ['coverage'],
+                preprocessors: {
+                    'app/js/**/*.js': ['coverage'],
+                    'app/partials/directives/**/*.html': ['ng-html2js']
+                },
+                coverageReporter: {
+                    type: "lcov",
+                    dir: "coverage/"
+                },
+                singleRun: true
+            }
+        },
+        coveralls: {
+            options: {
+                debug: true,
+                coverage_dir: 'coverage'
             }
         },
         cdnify: {
@@ -343,6 +369,9 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-karma-coveralls');
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {

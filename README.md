@@ -110,8 +110,9 @@ info.
 
 ## Build Status ##
 
-Travis : [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?branch=master)](https://travis-ci.org/arey/angular-musicbrainz)
+Travis: [![Build Status](https://travis-ci.org/arey/angular-musicbrainz.png?branch=master)](https://travis-ci.org/arey/angular-musicbrainz)
 
+Code Converage: [![Coverage Status](https://coveralls.io/repos/arey/angular-musicbrainz/badge.png)](https://coveralls.io/r/arey/angular-musicbrainz)
 
 ## Directory Layout
 
