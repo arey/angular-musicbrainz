@@ -19,7 +19,7 @@
     "grunt-contrib-coffee": "~0.8.2",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-jshint": "~0.7.2s",
+    "grunt-contrib-jshint": "~0.7.2",
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-connect": "~0.6.0",
     "grunt-contrib-clean": "~0.5.0",
