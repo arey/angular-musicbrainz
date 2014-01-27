@@ -23,14 +23,6 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: config,
         watch: {
-            coffee: {
-                files: ['<%= config.app %>/scripts/{,*/}*.coffee'],
-                tasks: ['coffee:dist']
-            },
-            coffeeTest: {
-                files: ['test/unit/{,*/}*.coffee'],
-                tasks: ['coffee:test']
-            },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css', '<%= config.app %>/lib/bootstrap/dist/css/*.css'],
                 tasks: ['copy:styles', 'autoprefixer']
@@ -42,8 +34,8 @@ module.exports = function (grunt) {
                 files: [
                     '<%= config.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
-                    '{.tmp,<%= config.app %>}/scripts/{,*/}*.js',
-                    '<%= config.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '{.tmp,<%= config.app %>}/js/{,*/}*.js',
+                    '<%= config.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             }
         },
@@ -126,34 +118,6 @@ module.exports = function (grunt) {
             all: [
                 '<%= config.app %>/js/{,*/}*.js'
             ]
-        },
-        coffee: {
-            options: {
-                sourceMap: true,
-                sourceRoot: ''
-            },
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= config.app %>/scripts',
-                        src: '{,*/}*.coffee',
-                        dest: '.tmp/scripts',
-                        ext: '.js'
-                    }
-                ]
-            },
-            test: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'test/unit',
-                        src: '{,*/}*.coffee',
-                        dest: '.tmp/unit',
-                        ext: '.js'
-                    }
-                ]
-            }
         },
         // not used since Uglify task does concat,
         // but still available if needed
@@ -295,15 +259,12 @@ module.exports = function (grunt) {
         },
         concurrent: {
             server: [
-                'coffee:dist',
                 'copy:styles'
             ],
             test: [
-                'coffee',
                 'copy:styles'
             ],
             dist: [
-                'coffee',
                 'copy:styles',
                 'imagemin',
                 'svgmin',
@@ -313,7 +274,7 @@ module.exports = function (grunt) {
 
         karma: {
             options: {
-                configFile: 'config/karma.conf.js',
+                configFile: 'config/karma.conf.js'
             },
             dev: {
                 browsers: ['Chrome']
@@ -352,9 +313,9 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= config.dist %>/scripts',
+                        cwd: '<%= config.dist %>/js',
                         src: '*.js',
-                        dest: '<%= config.dist %>/scripts'
+                        dest: '<%= config.dist %>/js'
                     }
                 ]
             }
@@ -362,8 +323,8 @@ module.exports = function (grunt) {
         uglify: {
             dist: {
                 files: {
-                    '<%= config.dist %>/scripts/application.js': [
-                        '<%= config.dist %>/scripts/application.js'
+                    '<%= config.dist %>/js/application.js': [
+                        '<%= config.dist %>/js/application.js'
                     ]
                 }
             }
