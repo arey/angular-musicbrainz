@@ -133,6 +133,7 @@ Dependencies: [![Dependency Status](https://david-dm.org/arey/angular-musicbrain
         services.js     --> custom angular services
       lib/                  --> angular and 3rd party javascript libraries declared in bower.json
         angular/
+        angular-i18n/
         angular-mocks/      --> mocks that replace certain angular services in tests
         angular-resource/
         angular-route/
