@@ -164,7 +164,7 @@ Dependencies: [![Dependency Status](https://david-dm.org/arey/angular-musicbrain
       test.sh           --> autotests unit tests with Karma (*nix)
       web-server.js     --> simple development webserver based on node.js
 
-    test/               --> test source files and libraries
+    test/               --> test source files
       e2e/              --> end-to-end tests level
         runner.html     --> end-to-end test runner (open in your browser to run)
         scenarios.js    --> end-to-end specs
