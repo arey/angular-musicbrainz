@@ -21,8 +21,7 @@ angular.module('musicAlbumApp.services', ['ngResource'])
         var searchServiceInstance = {
 
             'fullTextSearch': function (from, size, text, callback) {
-
-                // search for documents (and also promises!!)
+                // search for documents and also promises
                 es.search({
                     index: 'musicalbum',
                     type: 'album',
@@ -75,7 +74,6 @@ angular.module('musicAlbumApp.services', ['ngResource'])
                         }
                     }
                 }).then(function (resp) {
-                        callback(resp);
                         callback(resp);
                     });
             },
