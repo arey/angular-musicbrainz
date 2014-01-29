@@ -1,6 +1,6 @@
 {
   "name": "angular-musicbrainz",
-  "description": "A starter project for AngularJS",
+  "description": "Simple music album search web app built with AngularJS",
   "repository": "https://github.com/arey/angular-musicbrainz",
   "devDependencies": {
     "phantomjs": "~1.9",

@@ -3,7 +3,7 @@
 /* Services */
 
 angular.module('musicAlbumApp.services', ['ngResource'])
-    .value('version', '0.1')
+    .value('version', '1.0')
     // elasticsearch.angular.js creates an elasticsearch
     // module, which provides an esFactory
     .service('es', ['esFactory', function (esFactory) {
