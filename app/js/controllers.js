@@ -14,11 +14,6 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
         ];
         $scope.pageSize = $scope.pageSizes[1]; // 10
 
-        var onSearchResponse = function (resp) {
-            $scope.searchResp = resp;
-            $scope.totalItems = resp.hits.total;
-        };
-
         $scope.selectPage = function (page) {
             $scope.fullTextSearch($scope.searchText, page);
         };
@@ -26,7 +21,12 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
         $scope.fullTextSearch = function (text, page) {
             $scope.currentPage = page;
             var from = ($scope.currentPage - 1) * $scope.pageSize.count;
-            searchService.fullTextSearch(from, $scope.pageSize.count, text, onSearchResponse);
+            searchService.fullTextSearch(from, $scope.pageSize.count, text).then(
+                function (resp) {
+                    $scope.searchResp = resp;
+                    $scope.totalItems = resp.hits.total;
+                }
+            );
         };
 
         $scope.isAvailableResults = function () {

@@ -17,12 +17,9 @@ angular.module('musicAlbumApp.services', ['ngResource'])
         });
     }])
     .factory('searchService', ['es', function (es) {
-
-        var searchServiceInstance = {
-
-            'fullTextSearch': function (from, size, text, callback) {
-                // search for documents and also promises
-                es.search({
+        return {
+            'fullTextSearch': function (from, size, text) {
+                return es.search({
                     index: 'musicalbum',
                     type: 'album',
                     body: {
@@ -73,9 +70,7 @@ angular.module('musicAlbumApp.services', ['ngResource'])
                             }
                         }
                     }
-                }).then(function (resp) {
-                        callback(resp);
-                    });
+                });
             },
 
             'autocomplete': function (text) {
@@ -122,8 +117,6 @@ angular.module('musicAlbumApp.services', ['ngResource'])
                 });
             }
         };
-        //factory function body that constructs searchServiceInstance
-        return searchServiceInstance;
     }])
     .value('userLanguage', {
         getFirstLanguageRange: function (acceptLang) {
