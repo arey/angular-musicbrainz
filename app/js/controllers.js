@@ -40,7 +40,6 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
             return $scope.searchResp.hits.total > 0;
         };
 
-        $scope.selected = undefined;
         $scope.autocomplete = function (text) {
             return searchService.autocomplete(text).then(function (res) {
                 var albums = [];
