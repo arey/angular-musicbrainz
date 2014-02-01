@@ -33,12 +33,12 @@ MusicBrainz database searching with AngularJS and Elasticsearch:
 
 This project depends on several other open source projects:
 
-* **Elasticsearch-js**: the brand new official JavaScript Elasticsearch client
+* **[Elasticsearch-js](https://github.com/elasticsearch/elasticsearch-js)**: the brand new official JavaScript Elasticsearch client
 * **[AngularJS](http://angularjs.org/)**: the popular Google MVC JavaScript framework
-* **Angular Seed**: application skeleton for a typical [AngularJS](http://angularjs.org/) web app
-* **Bootstrap**
-* **Angular UI Bootstrap**
-* **jQuery**: only used to asynchronously load JS files at runtime
+* **[Angular Seed](https://github.com/angular/angular-seed)**: application skeleton for a typical [AngularJS](http://angularjs.org/) web app
+* **[Bootstrap](Bootstrap)**: front-end framework for developing responsive
+* **[Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/)**: Bootstrap components written in pure AngularJS
+* **[jQuery](http://jquery.com/)**: only used to asynchronously load JS files at runtime
 
 ## Prerequisites ##
 
