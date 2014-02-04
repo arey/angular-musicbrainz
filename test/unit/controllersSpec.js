@@ -39,13 +39,6 @@ describe('Angular MusicBrainz controllers', function () {
             mockSearchService.fullTextSearch.andReturn(respDefer.promise);
         });
 
-        it('controller when load should set default properties values', function () {
-            expect(scope.maxSize).toBeDefined();
-            expect(scope.currentPage).toBeDefined();
-            expect(scope.pageSizes).toBeDefined();
-            expect(scope.pageSize).toBeDefined();
-        });
-
         it('fullTextSearch should put the searchResp variable into the scope', function () {
 
             expect(scope.searchResp).toBeUndefined();
@@ -61,6 +54,13 @@ describe('Angular MusicBrainz controllers', function () {
             expect(scope.totalItems).toBeDefined();
             expect(scope.isAvailableResults()).toBeTruthy();
             expect(scope.isAtLeastOneResult()).toBeTruthy();
+        });
+
+        it('controller when load should set default properties values', function () {
+            expect(scope.maxSize).toBeDefined();
+            expect(scope.currentPage).toBeDefined();
+            expect(scope.pageSizes).toBeDefined();
+            expect(scope.pageSize).toBeDefined();
         });
 
         it('rangeGreaterThanZero', function () {
