@@ -27,16 +27,29 @@ describe('Angular MusicBrainz controllers', function () {
         //The actual before each for setting up common variables, dependencies or functions
         beforeEach(function () {
             mockSearchService.fullTextSearch = jasmine.createSpy('fullTextSearch');
+            mockSearchService.autocomplete = jasmine.createSpy('autocomplete');
 
-            //this will be the return type of the api.users, it will return a promise
             var respDefer = $q.defer();
 
             //resolve on a defer and passing it data, will always run the first argument of the then() if you want to test the second one, write reject() instead, but here by default we want to resolve it and pass it an empty object that we can change it's value in any unit test
-            respData = { hits: { total: 5}};
+            respData = {
+                hits: {
+                    total: 1,
+                    hits: [
+                        {  fields: {
+                            name: 'War',
+                            year: 1983,
+                            'artist.name':'U2'
+                        }
+                        }
+                    ]
+                }
+            };
             respDefer.resolve(respData);
 
             //defer.promise is actually the object that has the then() method
             mockSearchService.fullTextSearch.andReturn(respDefer.promise);
+            mockSearchService.autocomplete.andReturn(respDefer.promise);
         });
 
         it('fullTextSearch should put the searchResp variable into the scope', function () {
@@ -47,7 +60,8 @@ describe('Angular MusicBrainz controllers', function () {
 
             scope.fullTextSearch('U2', 1);
 
-            //scope.$digest() will fire watchers on current scope, in short will run the callback function in the controller that will call anotherService.doSomething
+            // scope.$digest() will fire watchers on current scope,
+            // in short will run the callback function in the controller that will call anotherService.doSomething
             scope.$digest();
 
             expect(scope.searchResp).toBeDefined();
@@ -66,6 +80,16 @@ describe('Angular MusicBrainz controllers', function () {
         it('rangeGreaterThanZero', function () {
             expect(scope.rangeGreaterThanZero({ count: 5})).toBeTruthy();
             expect(scope.rangeGreaterThanZero({ count: 0})).toBeFalsy();
+        });
+
+        it('autocomplete should return a single album', function () {
+            var albums = scope.autocomplete('U2');
+            // Propagate promise resolution to 'then' functions using $apply().
+            scope.$apply();
+
+            expect(scope.autocompleteResp).not.toBeNull();
+            expect(scope.autocompleteResp.length).toEqual(1);
+            expect(scope.autocompleteResp[0]).toEqual('U2 - War (1983)');
         });
 
     });

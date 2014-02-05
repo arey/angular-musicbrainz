@@ -46,6 +46,7 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
                 angular.forEach(res.hits.hits, function (hit) {
                     albums.push(hit.fields['artist.name'] + ' - ' + hit.fields.name + ' (' + hit.fields.year + ')');
                 });
+                $scope.autocompleteResp = albums;
                 return albums;
             });
         };
