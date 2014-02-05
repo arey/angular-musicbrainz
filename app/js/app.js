@@ -1,21 +1,15 @@
 'use strict';
 
-
 // Declare app level module which depends on filters, and services
 angular.module('musicAlbumApp', [
-        'ngRoute',
         'ngSanitize',
         'elasticsearch',
+        'musicAlbumApp.routes',
         'musicAlbumApp.filters',
         'musicAlbumApp.services',
         'musicAlbumApp.directives',
         'musicAlbumApp.controllers'
     ]).
-    config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/search', {templateUrl: 'partials/search.html', controller: 'SearchCtrl'});
-        $routeProvider.when('/info', {templateUrl: 'partials/info.html', controller: 'InfoCtrl'});
-        $routeProvider.otherwise({redirectTo: '/search'});
-    }]).
     run(['$http', '$rootScope', 'userLanguage', 'translation', function ($http, $rootScope, userLanguage, translation) {
         var langRange = 'en-us';
         var language = 'en';
