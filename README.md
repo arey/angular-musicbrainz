@@ -9,7 +9,7 @@ Only "real" **Album** are searchable. Single, EP, Compilation, Live, Remix, Soun
 * **Autocomplete** with highlighting
 * **Paginated search results** with album cover thumbs
 * **Faceting**: distribution of music albums in the result set
-* **I18N*: both english and french languages are supported
+* **I18N**: both english and french languages are supported
 * **Unit tests** and **end-to-end tests** with Karma and Jasmine
 * Cover and Rating Angular directives
 * Elasticsearch-js client usage
