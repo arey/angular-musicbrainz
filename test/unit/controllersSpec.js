@@ -87,6 +87,7 @@ describe('Angular MusicBrainz controllers', function () {
             // Propagate promise resolution to 'then' functions using $apply().
             scope.$apply();
 
+            expect(albums).toBeDefined();
             expect(scope.autocompleteResp).not.toBeNull();
             expect(scope.autocompleteResp.length).toEqual(1);
             expect(scope.autocompleteResp[0]).toEqual('U2 - War (1983)');
