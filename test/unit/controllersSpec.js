@@ -92,6 +92,12 @@ describe('Angular MusicBrainz controllers', function () {
             expect(scope.autocompleteResp[0]).toEqual('U2 - War (1983)');
         });
 
+        it('selectPage should set currentPage scope variable to 20', function () {
+            expect(scope.currentPage).not.toEqual(20);
+            scope.selectPage(20);
+            expect(scope.currentPage).toEqual(20);
+        });
+
     });
 
 
