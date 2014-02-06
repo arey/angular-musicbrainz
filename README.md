@@ -130,6 +130,7 @@ Dependencies: [![Dependency Status](https://david-dm.org/arey/angular-musicbrain
         controllers.js  --> application controllers
         directives.js   --> application directives
         filters.js      --> custom angular filters
+        routes.js       --> application routes
         services.js     --> custom angular services
       lib/                  --> angular and 3rd party javascript libraries declared in bower.json
         angular/
