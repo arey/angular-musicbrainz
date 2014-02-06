@@ -6,18 +6,11 @@ describe('my angular musicbrainz app', function () {
         browser().navigateTo('app/index.html');
     });
 
-
-    it('should automatically redirect to /search when location hash/fragment is empty', function () {
-        expect(browser().location().url()).toBe('/search');
-    });
-
-
     describe('search', function () {
 
         beforeEach(function () {
             browser().navigateTo('#/search');
         });
-
 
         it('should render search when user navigates to /search', function () {
             expect(element('#search-input-label').text()).
@@ -34,18 +27,21 @@ describe('my angular musicbrainz app', function () {
 
     });
 
-
     describe('info', function () {
 
         beforeEach(function () {
             browser().navigateTo('#/info');
         });
 
-
         it('should render info when user navigates to /info', function () {
-            expect(element('[ng-view] p:first').text()).
-                toMatch(/Information/);
+            expect(element('[ng-view] li:first').text()).
+                toMatch(/Application version/);
         });
 
     });
+
+    it('should automatically redirect to /search when location hash/fragment is empty', function () {
+        expect(browser().location().url()).toBe('/search');
+    });
+
 });
