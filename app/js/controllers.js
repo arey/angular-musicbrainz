@@ -58,5 +58,6 @@ angular.module('musicAlbumApp.controllers', ['ui.bootstrap']).
     .controller('InfoCtrl', ['$scope', function ($scope) {
         $scope.demoUrl = 'http://angular-musicbrainz.javaetmoi.com/';
         $scope.demoSourceUrl = 'https://github.com/arey/angular-musicbrainz';
+        $scope.blogArticleUrl = 'http://javaetmoi.com/2014/02/developper-industrialiser-web-app-recherche-angularjs';
     }
 ]);
