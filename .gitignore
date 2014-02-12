@@ -5,6 +5,6 @@ tmp
 .DS_Store
 .idea
 *.iml
-dist
+/dist
 .tmp
 coverage
