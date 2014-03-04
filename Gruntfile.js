@@ -274,11 +274,6 @@ module.exports = function (grunt) {
                 coverage_dir: 'coverage'
             }
         },
-        cdnify: {
-            dist: {
-                html: ['<%= config.dist %>/*.html']
-            }
-        },
         ngmin: {
             dist: {
                 files: [
@@ -326,7 +321,6 @@ module.exports = function (grunt) {
         'autoprefixer',
         'concat',
         'copy:dist',
-        'cdnify',
         'ngmin',
         'cssmin',
         'uglify',
