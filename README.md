@@ -117,6 +117,8 @@ Code Converage: [![Coverage Status](https://coveralls.io/repos/arey/angular-musi
 Dependencies: [![Dependency Status](https://david-dm.org/arey/angular-musicbrainz/status.png?branch=master)](https://david-dm.org/arey/angular-musicbrainz#info=Dependencies)
 [![devDependency Status](https://david-dm.org/arey/angular-musicbrainz/dev-status.png?branch=master)](https://david-dm.org/arey/angular-musicbrainz#info=devDependencies)
 
+Code Climate: [![Code Climate](https://codeclimate.com/github/arey/angular-musicbrainz.png)](https://codeclimate.com/github/arey/angular-musicbrainz)
+
 ## Documentation ##
 
 * French blog post: [Développer et industrialiser une web app avec AngularJS](http://javaetmoi.com/2014/02/developper-industrialiser-web-app-recherche-angularjs)
