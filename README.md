@@ -180,3 +180,7 @@ Code Climate: [![Code Climate](https://codeclimate.com/github/arey/angular-music
         directivessSpec.js      --> specs for directives
         filtersSpec.js          --> specs for filters
         servicesSpec.js         --> specs for services
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arey/angular-musicbrainz/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
