@@ -10,7 +10,7 @@ angular.module('musicAlbumApp.services', ['ngResource'])
         return esFactory({
             hosts: [
                 // you may use localhost:9200 with a local Elasticsearch cluster
-                'es.javaetmoi.com:80'
+                'nginx-arey.rhcloud.com:80'
             ],
             log: 'trace',
             sniffOnStart: false
